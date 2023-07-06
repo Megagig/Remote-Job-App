@@ -1,9 +1,3 @@
-<a name="readme-top"></a>
-
-<div align="center">
-  <img src="src/assets/LinkedIn Cover Main.jpg" alt="logo" width="100%"  height="auto" />
-  <br/>
-
   <h3><b>Remote Job App</b></h3>
 
 </div>
@@ -71,7 +65,7 @@
 
 - [Live Demo Link](https://remote-job-app.onrender.com/)
 
-- [Presentation Video Link]()
+- [Walkthrough Video ](https://www.loom.com/share/045798f5fde145669431e02d21eaf6c4)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
