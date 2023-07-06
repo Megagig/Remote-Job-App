@@ -8,9 +8,8 @@
 
 body {
   width: 100%;
-  height: 100vh;
   font-family: 'Lato', sans-serif;
-  background-color: #46de97;
+  background-color: #221319;
   color: #fff;
 }
 
@@ -38,8 +37,8 @@ nav ul {
   align-items: center;
 }
 
-.settings,
-.back {
+.organise,
+.behind {
   width: 20%;
   display: flex;
   justify-content: space-between;
@@ -47,13 +46,13 @@ nav ul {
   padding: 1%;
 }
 
-.back,
-.remote {
+.behind,
+.hidden {
   font-size: 1.1em;
   font-weight: 800;
 }
 
-.remote {
+.hidden {
   font-weight: 300;
 }
 
@@ -63,38 +62,38 @@ nav ul {
   padding: 2%;
 }
 
-.screen {
+.viewport {
   width: 100%;
   height: 30vh;
   align-items: center;
   justify-content: space-around;
   display: flex;
-  background-color: #52b3fd;
+  background-color: #937581;
   padding: 1%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 30px;
 }
 
-.screen img {
+.viewport img {
   width: 30%;
   height: auto;
 }
 
-.jobs-container {
+.Display {
   width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
 }
 
-.jobs-container li {
+.Display li {
   width: 50%;
   height: auto;
   display: flex;
   justify-content: center;
 }
 
-.jobs-container button {
+.Display button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,45 +102,45 @@ nav ul {
   gap: 5%;
   width: 90%;
   height: 35vh;
-  background-color: #988c91;
-  border: 1px solid #ad9da3;
+  background-color: #937581;
+  border: 1px solid #8d6775;
   color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 30px;
   cursor: pointer;
 }
 
-.jobs-container button img {
+.Display button img {
   width: 30%;
   height: auto;
 }
 
-.details-container h2 {
+.content-box h2 {
   width: 100%;
   height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #de4682;
-  border: 1px solid #fd5294;
+  background-color: #937581;
+  border: 1px solid #e7dfe2;
   font-size: 1.2em;
   padding: 0 1%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 30px;
 }
 
-.screen-details h2 {
+.detail-view h2 {
   margin-left: 3%;
 }
 
-.screen p {
+.viewport p {
   width: 60%;
   font-size: 0.8em;
   font-weight: 900;
   line-height: 120%;
 }
 
-.jobs-container button h2 {
+.Display button h2 {
   font-size: 1.3em;
 }
 
@@ -178,7 +177,7 @@ nav ul {
     width: 50%;
   }
 
-  .jobs-container {
+  .Display {
     justify-content: center;
   }
 
@@ -187,43 +186,43 @@ nav ul {
     flex-wrap: wrap;
   }
 
-  .jobs-container li {
+  .Display li {
     width: 15%;
     height: auto;
     margin: 1%;
   }
 
-  .settings,
-  .back {
+  .organise,
+  .behind {
     justify-content: center;
   }
 
-  .settings {
+  .organise {
     gap: 10%;
   }
 
-  .screen p {
+  .viewport p {
     font-size: 1.5em;
   }
 
-  .screen-details img {
+  .detail-view img {
     width: 10%;
   }
 
-  .screen-details h2 {
+  .detail-view h2 {
     width: 30%;
     font-size: 2em;
   }
 
-  .details-container h2 {
+  .content-box h2 {
     width: 50%;
   }
 
-  .jobs-container button {
+  .Display button {
     transition: width 2s, height 2s, transform 2s;
   }
 
-  .jobs-container button:hover {
+  .Display button:hover {
     width: 400px;
     height: 350px;
     transform: rotate(20deg);

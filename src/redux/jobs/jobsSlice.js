@@ -3,14 +3,14 @@ import axios from 'axios';
 
 const initialState = {
   jobs: [],
-  isLoading: true,
+  status: 'idle',
   error: null,
 };
 
-export const fetchJobs = createAsyncThunk('jobs/fetchJobs', async () => {
+export const findjobs = createAsyncThunk('jobs/findjobs', async () => {
   try {
     const response = await axios.get(
-      'https://remotive.com/api/remote-jobs?limit=10'
+      'https://remotive.com/api/remote-jobs?category=software-dev'
     );
     return response.data.jobs;
   } catch (error) {
@@ -23,27 +23,33 @@ const jobsSlice = createSlice({
   initialState,
   reducers: {
     updateJobDetails: (state, action) => {
-      const { jobId, details } = action.payload;
+      const jobId = action.payload;
       state.jobs = state.jobs.map((job) =>
-        job.id === jobId ? { ...job, details: !details } : job
+        job.id === jobId ? { ...job, details: false } : job
+      );
+    },
+    resetJobDetails: (state, action) => {
+      const jobId = action.payload;
+      state.jobs = state.jobs.map((job) =>
+        job.id === jobId ? { ...job, details: true } : job
       );
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchJobs.pending, (state) => {
-        state.isLoading = true;
+      .addCase(findjobs.pending, (state) => {
+        state.status = 'loading';
       })
-      .addCase(fetchJobs.fulfilled, (state, { payload }) => {
-        state.isLoading = false;
+      .addCase(findjobs.fulfilled, (state, { payload }) => {
+        state.status = 'succeeded';
         state.jobs = payload;
       })
-      .addCase(fetchJobs.rejected, (state, action) => {
-        state.isLoading = false;
+      .addCase(findjobs.rejected, (state, action) => {
+        state.status = 'failed';
         state.error = action.error.message;
       });
   },
 });
 
-export const { updateJobDetails } = jobsSlice.actions;
+export const { updateJobDetails, resetJobDetails } = jobsSlice.actions;
 export default jobsSlice.reducer;

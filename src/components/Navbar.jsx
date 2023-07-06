@@ -8,14 +8,14 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 const Navbar = ({ text, year }) => (
   <nav>
     <ul>
-      <li className="back">
+      <li className="behind">
         <Link to="/" style={{ color: '#fff' }}>
           <KeyboardArrowLeftIcon style={{ fontSize: '2.5em' }} />
         </Link>
         {year}
       </li>
-      <li className="remote">{text}</li>
-      <li className="settings">
+      <li className="hidden">{text}</li>
+      <li className="organise">
         <div>
           <MicIcon />
         </div>
@@ -27,7 +27,7 @@ const Navbar = ({ text, year }) => (
   </nav>
 );
 
-Navigation.propTypes = {
+Navbar.propTypes = {
   text: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
 };
