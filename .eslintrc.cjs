@@ -9,7 +9,26 @@ module.exports = {
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
-  rules: {
-    'react-refresh/only-export-components': 'warn',
+  plugins: ['node'],
+  env: {
+    node: true,
   },
-}
+  globals: {
+    global: 'readonly',
+    require: 'readonly',
+  },
+
+  rules: {
+    'react-refresh/only-export-components': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': 'off',
+
+    'react/prop-types': [
+      'error',
+      {
+        skipUndeclared: true,
+      },
+    ],
+  },
+};

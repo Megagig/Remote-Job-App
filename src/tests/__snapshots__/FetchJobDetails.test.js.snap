@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests Delete Tour component Should render Removed Tour from the Main List 1`] = `
+<div>
+  <h2>
+    Something went wrong:
+  </h2>
+  <p>
+    React is not defined
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Try again
+  </button>
+</div>
+`;
+
+exports[`Tests FetchJobDetails component Should render FetchJobDetails component 1`] = `
+<div>
+  <h2>
+    Something went wrong:
+  </h2>
+  <p>
+    React is not defined
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Try again
+  </button>
+</div>
+`;
