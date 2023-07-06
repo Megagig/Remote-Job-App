@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
@@ -52,7 +52,7 @@ const FetchJobs = () => {
         <img src={remotejob} alt="man" />
         <p>
           Remote jobs have become increasingly popular, offering individuals the
-          opportunity to work from anywhere, whether it's their home, a
+          opportunity to work from anywhere, whether it&apos;s their home, a
           different city, or even a different country. This flexibility allows
           for a better work-life balance, as remote workers can tailor their
           schedules to accommodate personal needs.
