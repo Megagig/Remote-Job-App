@@ -1,4 +1,5 @@
 import React from 'react';
+/* global describe, it, expect */
 import { ErrorBoundary } from 'react-error-boundary';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';

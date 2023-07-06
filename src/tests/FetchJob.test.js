@@ -1,4 +1,7 @@
 import React from 'react';
+/* global describe, it, expect */
+
+import PropTypes from 'prop-types';
 import { ErrorBoundary } from 'react-error-boundary';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
@@ -19,6 +22,12 @@ function MyFallbackComponent({ error, resetErrorBoundary }) {
     </div>
   );
 }
+
+MyFallbackComponent.propTypes = {
+  error: PropTypes.object.isRequired,
+  resetErrorBoundary: PropTypes.func.isRequired,
+};
+
 describe('Tests FetchJob component', () => {
   it('Should render FetchJob component', () => {
     const tree = renderer
