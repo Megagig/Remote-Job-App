@@ -69,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://remote-job-app.onrender.com/)
 
 - [Presentation Video Link]()
 
@@ -94,7 +94,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:CaptainBawa/iHireAnywhere.git
+  git clone git@github.com:Megagig/Remote-Job-App.git
 ```
 
 ### Install
@@ -102,7 +102,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd iHireAnywhere
+  cd Remote-Job_App
   npm install
   yam install
 ```
@@ -112,7 +112,7 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
-  npm start
+  npm run dev
 ```
 
 ### Run tests
